@@ -5,9 +5,24 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: App
-    }
+      redirect: '/graphics'
+    },
+    {
+      path: '/graphics',
+      name: 'Graphics',
+      component: () => import('../components/GraphicsView.vue'),
+      meta: {
+        name: '绘制各种图形和线段'
+      }
+    },
+    {
+      path: '/assetsView',
+      name: 'AssetsView',
+      component: () => import('../components/AssetsView.vue'),
+      meta: {
+        name: '加载多个资源'
+      }
+    },
   ]
 })
 
