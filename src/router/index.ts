@@ -23,6 +23,22 @@ const router = createRouter({
         name: '加载多个资源'
       }
     },
+    {
+      path: '/textView',
+      name: 'TextView',
+      component: () => import('../components/TextView.vue'),
+      meta: {
+        name: '文字和遮罩层'
+      }
+    },
+    {
+      path: '/filterView',
+      name: 'FilterView',
+      component: () => import('../components/FilterView.vue'),
+      meta: {
+        name: '滤镜效果'
+      }
+    },
   ]
 })
 
